@@ -53,14 +53,14 @@ funBus.addEventListener('mouseover', e => {
 
  const imageS = document.querySelector('.img-content > img');
  imageS.addEventListener('dblclick', e => {
-     imageS.style.opacity = '.2';
+     imageS.style.display = 'none';
      e.stopPropagation();
 
  })
 
  const contSec = document.querySelector('.content-section');
  contSec.addEventListener('dblclick', e => {
-     imageS.style.opacity = '.2';
+     contSec.style.display = 'none';
  })
 
  const content = document.querySelector('.inverse-content');
