@@ -53,10 +53,22 @@ funBus.addEventListener('mouseover', e => {
 
  const imageS = document.querySelector('.img-content > img');
  imageS.addEventListener('dblclick', e => {
-     imageS.style.opacity = '.2'
+     imageS.style.opacity = '.2';
+     e.stopPropagation();
+
+ })
+
+ const contSec = document.querySelector('.content-section');
+ contSec.addEventListener('dblclick', e => {
+     imageS.style.opacity = '.2';
  })
 
  const content = document.querySelector('.inverse-content');
  content.addEventListener('mouseenter', e => {
     content.style.color= 'orange';
+ })
+
+ const navA = document.querySelector('.nav-link');
+ navA.addEventListener('click', e=>{
+     e.preventDefault();
  })
