@@ -21,95 +21,27 @@
 //   console.log(`This is my target: ${e.currentTarget}`);
 // });
 
-// const workBtn = document.querySelector('.lambda-button');
-// workBtn.addEventListener('click', e => {
-//   console.log(`Work button fired a click event!`);
-//   // ALL about stopping events from bubbling
-//   e.stopPropagation();
- 
-// });
-
-// workBtn.addEventListener('mouseover', e => {
-//   console.log(`Work button fired a click event!`);
-//   // ALL about stopping events from bubbling
-//   e.stopPropagation();
-//   TweenMax.to(e.currentTarget, 1, {
-//     width:200,
-//     ease:Bounce.easeOut
-//   });
-// });
-
-// workBtn.addEventListener('mouseout', e => {
-//   console.log(`Work button fired a click event!`);
-//   // ALL about stopping events from bubbling
-//   e.stopPropagation();
-//   TweenMax.to(e.currentTarget, 1, {
-//     width:150,
-//     ease:Bounce.easeOut
-//   });
-// });
-
-
-// const formSubmit = document.querySelector('.form-submit');
-// formSubmit.addEventListener('click', e => {
-//   console.log(`Work button fired a click event!`);
-//   // stops the original behavior of HTML elements
-//   e.preventDefault();
-// });
-
-
-// const contain = document.querySelector('.container home');
-// contain.addEventListener('mousover', e =>{
-//     console.log('Click event');
-//     TweenMax.from(e.currentTarget, 1, {width:200, ease:Bounce.easeOut});
-// })
 
 const headingS = document.querySelector('h1');
-headingS.addEventListener('click', e => {
+headingS.addEventListener('mousemove', e => {
     headingS.style.color = 'green';
     headingS.addEventListener('click', e => {
         headingS.style.color = 'blue';
-        headingS.addEventListener('click', e => {
+        headingS.addEventListener('mouseup', e => {
             headingS.style.color = 'purple';
-            headingS.addEventListener('click', e => {
+            headingS.addEventListener('mouseleave', e => {
                 headingS.style.color = '#212529';
 })})})})
 
 
 const funBus = document.querySelector('.intro > img');
 funBus.addEventListener('mouseover', e => {
-    // funBus.style.display = 'none';
     funBus.src = 'img/image.png';
 
     funBus.addEventListener('mouseout', e => {
         TweenMax.to(e.currentTarget, 3, {x: 1500, ease:Bounce.easeOut})
 })})
 
-
-//  const b = document.querySelector();
-//  a.addEventListener('drag', e=>{
-     
-//  })
-
-//  const c = document.querySelector();
-//  a.addEventListener('load', e=>{
-     
-//  })
-
-//  const d = document.querySelector();
-//  a.addEventListener('focus', e=>{
-     
-//  })
-
-//  const e = document.querySelector();
-//  a.addEventListener('resize', e=>{
-     
-//  })
-
-//  const f = document.querySelector();
-//  a.addEventListener('scroll', e=>{
-     
-//  })
 
  const contain = document.querySelector('.content-section');
  contain.addEventListener('mousedown', e => {
@@ -122,4 +54,9 @@ funBus.addEventListener('mouseover', e => {
  const imageS = document.querySelector('.img-content > img');
  imageS.addEventListener('dblclick', e => {
      imageS.style.opacity = '.2'
+ })
+
+ const content = document.querySelector('.inverse-content');
+ content.addEventListener('mouseenter', e => {
+    content.style.color= 'orange';
  })
